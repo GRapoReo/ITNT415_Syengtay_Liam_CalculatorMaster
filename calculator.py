@@ -4,6 +4,7 @@ def add(a, b):
     return a + b
 
 def subtract(a, b):
+    """Return the result of a minus b."""
     return a - b
 
 def main():
@@ -34,6 +35,8 @@ def main():
                 print("Result:", subtract(a, b))
             except ValueError:
                 print("Invalid input. Please enter numeric values.")
+            except Exception as e:
+                print("An unexpected error occurred:", e)
         elif choice in ("3", "4"):
             print("This operation is not yet implemented.")
         else:
