@@ -8,6 +8,7 @@ def subtract(a, b):
     return a - b
 
 def multiply(a, b):
+    """Return the product of a and b."""
     return a * b
 
 def main():
@@ -46,9 +47,9 @@ def main():
                 b = float(input("Enter second number: "))
                 print("Result:", multiply(a, b))
             except ValueError:
-                print("Invalid input. Please enter numeric values.")
-        elif choice == "4":
-            print("This operation is not yet implemented.")
+                print("Invalid input. Please enter numeric values only.")
+            except Exception as e:
+                print("An unexpected error occurred:", e)
         else:
             print("Invalid input. Please choose a number between 1 and 5.")
 
