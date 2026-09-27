@@ -3,6 +3,9 @@ def add(a, b):
     # Handles both int and float inputs
     return a + b
 
+def subtract(a, b):
+    return a - b
+
 def main():
     while True:
         print("\n--- Calculator Menu ---")
@@ -24,7 +27,14 @@ def main():
                 print("Result:", add(a, b))
             except ValueError:
                 print("Invalid input. Please enter numeric values.")
-        elif choice in ("2", "3", "4"):
+        elif choice == "2":
+            try:
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
+                print("Result:", subtract(a, b))
+            except ValueError:
+                print("Invalid input. Please enter numeric values.")
+        elif choice in ("3", "4"):
             print("This operation is not yet implemented.")
         else:
             print("Invalid input. Please choose a number between 1 and 5.")
