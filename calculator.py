@@ -7,6 +7,9 @@ def subtract(a, b):
     """Return the result of a minus b."""
     return a - b
 
+def multiply(a, b):
+    return a * b
+
 def main():
     while True:
         print("\n--- Calculator Menu ---")
@@ -37,7 +40,14 @@ def main():
                 print("Invalid input. Please enter numeric values.")
             except Exception as e:
                 print("An unexpected error occurred:", e)
-        elif choice in ("3", "4"):
+        elif choice == "3":
+            try:
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
+                print("Result:", multiply(a, b))
+            except ValueError:
+                print("Invalid input. Please enter numeric values.")
+        elif choice == "4":
             print("This operation is not yet implemented.")
         else:
             print("Invalid input. Please choose a number between 1 and 5.")
