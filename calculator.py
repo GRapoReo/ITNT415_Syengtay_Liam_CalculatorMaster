@@ -12,6 +12,7 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
+    """Return a divided by b, or an error message if b is zero."""
     if b == 0:
         return "Error: Cannot divide by zero."
     return a / b
@@ -61,7 +62,9 @@ def main():
                 b = float(input("Enter second number: "))
                 print("Result:", divide(a, b))
             except ValueError:
-                print("Invalid input. Please enter numeric values.")
+                print("Invalid input. Please enter numeric values only.")
+            except Exception as e:
+                print("An unexpected error occurred:", e)
         else:
             print("Invalid input. Please choose a number between 1 and 5.")
 
