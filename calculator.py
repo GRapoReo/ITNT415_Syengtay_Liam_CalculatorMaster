@@ -1,4 +1,6 @@
 def add(a, b):
+    """Return the sum of a and b."""
+    # Handles both int and float inputs
     return a + b
 
 def main():
