@@ -11,6 +11,12 @@ def multiply(a, b):
     """Return the product of a and b."""
     return a * b
 
+def divide(a, b):
+    """Return a divided by b, or an error message if b is zero."""
+    if b == 0:
+        return "Error: Cannot divide by zero."
+    return a / b
+
 def main():
     while True:
         print("\n--- Calculator Menu ---")
@@ -46,6 +52,15 @@ def main():
                 a = float(input("Enter first number: "))
                 b = float(input("Enter second number: "))
                 print("Result:", multiply(a, b))
+            except ValueError:
+                print("Invalid input. Please enter numeric values only.")
+            except Exception as e:
+                print("An unexpected error occurred:", e)
+        elif choice == "4":
+            try:
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
+                print("Result:", divide(a, b))
             except ValueError:
                 print("Invalid input. Please enter numeric values only.")
             except Exception as e:
